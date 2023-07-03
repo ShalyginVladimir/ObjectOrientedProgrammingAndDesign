@@ -21,6 +21,21 @@ class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void newTestRadio() {
+        Radio radio = new Radio(10);
+
+        radio.setCurrentStation(9);
+
+        radio.next();
+
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+
 
     @Test
     public void shiftingToTheFrontFromEight() {
@@ -29,6 +44,8 @@ class RadioTest {
         radio.setCurrentStation(8);
 
         radio.next();
+
+
 
         int expected = 9;
         int actual = radio.getCurrentStation();
@@ -39,6 +56,7 @@ class RadioTest {
     @Test
     public void switchToSwitchFromNine() {
         Radio radio = new Radio();
+
 
         radio.setCurrentStation(9);
 
